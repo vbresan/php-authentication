@@ -19,18 +19,62 @@ Step by step instructions:
 
 == 3. Call `_buildTables.php` script ==
 
-  If you have set everything from the previous step correctly, this script will create the following tables: [DBTables#LastLogin LastLogin] <a href="https://www.blogger.com/2009/06/db-tables.html#LastLogin">`LastLogin`</a>, <span style="font-family: courier new;"><a href="https://www.blogger.com/2009/06/db-tables.html#MaskedCookieData">MaskedCookieData</a></span>, <span style="font-family: courier new;"><a href="https://www.blogger.com/2009/06/db-tables.html#TempInvitation">TempInvitation</a></span>, <span style="font-family: courier new;"><a href="https://www.blogger.com/2009/06/db-tables.html#TempVerification">TempVerification</a></span> and <span style="font-family: courier new;"><a href="https://www.blogger.com/2009/06/db-tables.html#User">User</a></span>. Also in local file system, folder <span style="font-family: courier new;">compiled</span> and file <span style="font-family: courier new;">ezpdo.log</span> will be created. After you are done with this step, you can delete <span style="font-family: courier new;">_buildTables.php</span> script.</div>
-<br />
-<a href="https://www.blogger.com/null" name="verify.php"></a><strong>4. Customize <span style="font-family: courier new;">verify.php</span> file</strong><br />
-<div style="padding-left: 30px;">
-Link to this file is sent to user via e-mail upon registration as a request for account verification. You can customize this file and give it a desired look, just be sure to keep the <span style="font-family: courier new;">include_once</span> tag at the top and <span style="font-family: courier new;">$userMessage</span> variable wherever you want.</div>
-<br />
-<a href="https://www.blogger.com/null" name="properties.ini"></a><strong>5. Customize <span style="font-family: courier new;">properties.ini</span> file</strong><br />
-<div style="padding-left: 30px;">
-Properties file contains several sections, we'll describe each one right here.<br /><br /><br /><strong>Section <span style="font-family: courier new;">[General]</span>:</strong><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;PHP Authentication comes with multi-language support. You select your preferred language by setting the <span style="font-family: courier new;">DefaultLanguage</span> parameter. You can add your own translation (or customize existing) by modifying the <span style="font-family: courier new;">messages.php</span> file.<br /><br />Each registered user can send registration invitations to friends. Number of invitations that user can send is defined by parameter <span style="font-family: courier new;">NumberOfInvitations</span>. <br /><br />If <span style="font-family: courier new;">CheckForRegistrationCode</span> parameter is set to 1, registration code is sent along with each invitation and new users can register only by providing that code. Think of it as of 'closed' web site support - new users can register only if they are invited by existing users. If <span style="font-family: courier new;">CheckForRegistrationCode</span> is set to 0, invitations can still be sent around but they will not contain registration code, since they are not needed now.<br /><br />If <span style="font-family: courier new;">SendVerificationEMail</span> parameter is set to 1, e-mail with verification link is sent to user after his registration. User will not be able to log in until he verifies his account by opening this link. If parameter is set to 0, user's account will be verified on registration and verification mail will not be sent.<br /><br />With <span style="font-family: courier new;">MessageFormat</span> parameter you define the format of PHP Authentication's output messages. The following two formats are available: <span style="font-family: courier new;">XML</span> (default) and <span style="font-family: courier new;">JSON</span>. <br /><br /><br /><strong>Section <span style="font-family: courier new;">[UserName]</span>:</strong><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: courier new;">MinLength</span> and <span style="font-family: courier new;">MaxLength</span> define username minimum and maximum lengths, respectively. Maximum length can not be greater than 64 and username must be alphanumeric string. If <span style="font-family: courier new;">AllowEMailAddress</span> is set to 1, username can have e-mail address syntax and length constraints do not apply. <br /><br /><br /><strong>Section <span style="font-family: courier new;">[VerificationMail]</span>:</strong><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;Upon registration, e-mail is sent to user containing the link for account verification. In order to verify the account, user is required to visit the link before the first login. <br /><br />Link URL is defined with the parameter <span style="font-family: courier new;">Link</span>. Enter your hostname and path to <span style="font-family: courier new;">verify.php</span> script, leave the remaining part untouched.<br /><br />Parameter <span style="font-family: courier new;">MailSubject</span> defines the subject of verification request e-mail, while parameters <span style="font-family: courier new;">MailBodyFile</span> and <span style="font-family: courier new;">MailHeadersFile</span> define paths to mail body and mail headers templates respectively. Customize templates as you wish, just don't forget to leave <span style="font-family: courier new;">{$link}</span> string inside the mail body.<br /><br /><br /><strong>Section <span style="font-family: courier new;">[LoginDataMail]</span>:</strong><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;In case user forgets his username or password, he can make a request for forgotten credentials. Username and new password will be sent via e-mail to address that he used when he registered his account.<br /><br />Parameter <span style="font-family: courier new;">MailSubject</span> defines the subject of e-mail, while parameters <span style="font-family: courier new;">MailBodyFile</span> and <span style="font-family: courier new;">MailHeadersFile</span> define paths to mail body and mail headers templates respectively. Customize templates as you wish, just don't forget to leave <span style="font-family: courier new;">{$userName}</span> and <span style="font-family: courier new;">{$password}</span> strings inside the mail body.<br /><br /><br /><strong>Section <span style="font-family: courier new;">[InvitationMail]</span>:</strong><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;This section defines the look of invitation mail.<br /><br />Parameter <span style="font-family: courier new;">MailSubject</span> defines the subject of e-mail which will contain inviter's name if the <span style="font-family: courier new;">{$name}</span> string is included. Parameter <span style="font-family: courier new;">MailBodyTailFile</span> defines the tail that will be appended to custom message that is inviter sending. If registration codes are used, this tail should contain <span style="font-family: courier new;">{$registrationCode}</span> string. Finally, parameter <span style="font-family: courier new;">MailHeadersFile</span> defines path to mail headers template file. <br /><br /><br /><strong>Section <span style="font-family: courier new;">[DaysToExpire]</span>:</strong><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;In this section you can set the number of days after which the invitations and unverified accounts will expire. For that purpose you use <span style="font-family: courier new;">TempInvitation</span> and <span style="font-family: courier new;">TempVerification</span> parameters respectively. When the value is set to 0, data is not expired. Deletion of old data is actually done by the <span style="font-family: courier new;">deleteExpiredData.php</span> script.<br /><br /><br /><strong>Section <span style="font-family: courier new;">[EZPDO]</span>:</strong><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;You don't need to modify this section unless you want to move EZPDO directory somewhere else, or you already have it somewhere on your system. In that case you should customize <span style="font-family: courier new;">RelativePath</span> parameter and make it point wherever you want. Just keep in mind that it is relative path, so keep the starting <span style="font-family: courier new;">./</span> and omit the trailing slash.</div>
-<br />
-<strong>6. Set up cron to run <span style="font-family: courier new;">deleteExpiredData.php</span> once a day</strong><br />
-<div style="padding-left: 30px;">
-Instructions for this step are different on each hosting environment. If you don't know how to set up scheduler to run the script in regular intervals, the best would be to ask your hosting provider for help.</div>
-<br />
-<strong>That should be it!</strong> You are ready to start using PHP Authentication web service. Continue by checking the <a href="https://www.blogger.com/2009/06/api.html">API</a>.
+  If you have set everything from the previous step correctly, this script will create the following tables: [DBTables#LastLogin LastLogin], [DBTables#MaskedCookieData MaskedCookieData], [DBTables#TempInvitation TempInvitation], [DBTables#TempVerification TempVerification] and [DBTables#User User]. Also in local file system, folder `compiled` and file `ezpdo.log` will be created. After you are done with this step, you can delete `_buildTables.php` script.
+
+== 4. Customize `verify.php` file ==
+
+  Link to this file is sent to user via e-mail upon registration as a request for account verification. You can customize this file and give it a desired look, just be sure to keep the `include_once` tag at the top and `$userMessage` variable wherever you want.
+
+== 5. Customize 'properties.ini' file ==
+
+  Properties file contains several sections, we'll describe each one right here.
+
+  === Section `[General]`: ===
+
+    PHP Authentication comes with multi-language support. You select your preferred language by setting the `DefaultLanguage` parameter. You can add your own translation (or customize existing) by modifying the `messages.php` file.
+
+    Each registered user can send registration invitations to friends. Number of invitations that user can send is defined by parameter `NumberOfInvitations`.
+
+    If `CheckForRegistrationCode` parameter is set to 1, registration code is sent along with each invitation and new users can register only by providing that code. Think of it as of 'closed' web site support - new users can register only if they are invited by existing users. If `CheckForRegistrationCode` is set to 0, invitations can still be sent around but they will not contain registration code, since they are not needed now.
+
+    If `SendVerificationEMail` parameter is set to 1, e-mail with verification link is sent to user after his registration. User will not be able to log in until he verifies his account by opening this link. If parameter is set to 0, user's account will be verified on registration and verification mail will not be sent.
+
+    With `MessageFormat` parameter you define the format of PHP Authentication's output messages. The following two formats are available: `XML` (default) and `JSON`. 
+
+  === Section `[UserName]`: ===
+
+    `MinLength` and `MaxLength` define username minimum and maximum lengths, respectively. Maximum length can not be greater than 64 and username must be alphanumeric string. If `AllowEMailAddress` is set to 1, username can have e-mail address syntax and length constraints do not apply. 
+
+  === Section `[VerificationMail]`: ===
+
+    Upon registration, e-mail is sent to user containing the link for account verification. In order to verify the account, user is required to visit the link before the first login. 
+
+    Link URL is defined with the parameter `Link`. Enter your hostname and path to `verify.php` script, leave the remaining part untouched.
+
+    Parameter `MailSubject` defines the subject of verification request e-mail, while parameters `MailBodyFile` and `MailHeadersFile` define paths to mail body and mail headers templates respectively. Customize templates as you wish, just don't forget to leave `{$link}` string inside the mail body.
+
+  === Section `[LoginDataMail]`: ===
+
+    In case user forgets his username or password, he can make a request for forgotten credentials. Username and new password will be sent via e-mail to address that he used when he registered his account.
+
+    Parameter `MailSubject` defines the subject of e-mail, while parameters `MailBodyFile` and `MailHeadersFile` define paths to mail body and mail headers templates respectively. Customize templates as you wish, just don't forget to leave `{$userName}` and `{$password}` strings inside the mail body.
+
+  === Section `[InvitationMail]`: ===
+
+    This section defines the look of invitation mail.
+
+    Parameter `MailSubject` defines the subject of e-mail which will contain inviter's name if the `{$name}` string is included. Parameter `MailBodyTailFile` defines the tail that will be appended to custom message that is inviter sending. If registration codes are used, this tail should contain `{$registrationCode}` string. Finally, parameter `MailHeadersFile` defines path to mail headers template file.
+
+  === Section `[DaysToExpire]`: ===
+
+    In this section you can set the number of days after which the invitations and unverified accounts will expire. For that purpose you use `TempInvitation` and `TempVerification` parameters respectively. When the value is set to 0, data is not expired. Deletion of old data is actually done by the `deleteExpiredData.php` script.
+
+  === Section `[EZPDO]`: ===
+
+    You don't need to modify this section unless you want to move EZPDO directory somewhere else, or you already have it somewhere on your system. In that case you should customize `RelativePath` parameter and make it point wherever you want. Just keep in mind that it is relative path, so keep the starting `./` and omit the trailing slash.
+
+== 6. Set up cron to run `deleteExpiredData.php` once a day ==
+  
+  Instructions for this step are different on each hosting environment. If you don't know how to set up scheduler to run the script in regular intervals, the best would be to ask your hosting provider for help.
+
+*That should be it!* You are ready to start using PHP Authentication web service. Continue by checking the API.
