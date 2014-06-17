@@ -4,6 +4,6 @@
 
 *What do I need to know to use PHP Authentication?*
 
-  # Be sure that you understand installation procedure here Installation
+  # Be sure that you understand installation procedure here InstallationInstructions
   # You have to know how to make asynchronous POST requests
   # You have to know how to extract data from XML or JSON
