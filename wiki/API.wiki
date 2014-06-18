@@ -67,26 +67,57 @@ Possible XML outputs on failure:
     <Message>User name not available or e-mail address already registered in system</Message>
 </XMLMessage>
   }}}
-<div style="padding-left: 30px;">
-<br /><span style="color: blue; font-family: 'Courier New';">&lt;?</span><span style="color: blue; font-family: 'Courier New';">xml</span> <span style="color: red; font-family: 'Courier New';">version</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"1.0"</strong></span> <span style="color: red; font-family: 'Courier New';">encoding</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UTF-8"?</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;XMLMessage</span> <span style="color: red; font-family: 'Courier New';">type</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UserRegistration"</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Error&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>true</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Error&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;UserName&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>anonymous</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/UserName&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Message&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>Invalid input</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Message&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;/XMLMessage&gt;</span><br /><br /><span style="color: blue; font-family: 'Courier New';">&lt;?</span><span style="color: blue; font-family: 'Courier New';">xml</span> <span style="color: red; font-family: 'Courier New';">version</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"1.0"</strong></span> <span style="color: red; font-family: 'Courier New';">encoding</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UTF-8"?</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;XMLMessage</span> <span style="color: red; font-family: 'Courier New';">type</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UserRegistration"</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Error&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>true</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Error&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;UserName&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>anonymous</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/UserName&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Message&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>Unknown registration code</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Message&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;/XMLMessage&gt;</span><br /><br /><span style="color: blue; font-family: 'Courier New';">&lt;?</span><span style="color: blue; font-family: 'Courier New';">xml</span> <span style="color: red; font-family: 'Courier New';">version</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"1.0"</strong></span> <span style="color: red; font-family: 'Courier New';">encoding</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UTF-8"?</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;XMLMessage</span> <span style="color: red; font-family: 'Courier New';">type</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UserRegistration"</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Error&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>true</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Error&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;UserName&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>anonymous</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/UserName&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Message&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>User name not available or e-mail address already registered in system</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Message&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;/XMLMessage&gt;</span></div>
-<br />
-JSON output on success:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"UserRegistration",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:false,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"anonymous",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:["Account verification request sent to your e-mail address"]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span></div>
-<br />
-or:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"UserRegistration",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:false,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"anonymous",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:["User registered"]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span></div>
-<br />
-Possible JSON outputs on failure:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"UserRegistration",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:true,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"anonymous",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:["Invalid input"]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span><br /><br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"UserRegistration",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:true,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"anonymous",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:["Unknown registration code"]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span><br /><br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"UserRegistration",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:true,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"anonymous",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:["User name not available or e-mail address already registered in system"]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span></div>
-<br />
-<br />
-<hr />
-<br />
-<strong><span style="font-size: 130%;">Script name: <a href="https://www.blogger.com/null" name="unregister.php"><span style="font-family: courier new;">unregister.php</span></a></span></strong><br />
-<br />
+
+JSON output on success:
+  __
+  {{{
+{
+ "type":"UserRegistration",
+ "error":false,
+ "userName":"anonymous",
+ "message":["Account verification request sent to your e-mail address"]
+}
+  }}}
+  or:
+  {{{
+{
+ "type":"UserRegistration",
+ "error":false,
+ "userName":"anonymous",
+ "message":["User registered"]
+}
+  }}}
+
+Possible JSON outputs on failure:
+  __
+  {{{
+{
+ "type":"UserRegistration",
+ "error":true,
+ "userName":"anonymous",
+ "message":["Invalid input"]
+}
+  }}}
+  {{{
+{
+ "type":"UserRegistration",
+ "error":true,
+ "userName":"anonymous",
+ "message":["Unknown registration code"]
+}
+  }}}
+  {{{
+{
+ "type":"UserRegistration",
+ "error":true,
+ "userName":"anonymous",
+ "message":["User name not available or e-mail address already registered in system"]
+}
+  }}}
+----
+
+== Script name: `unregister.php` ==
+
 POST Parameters: None<br />
 Modified tables:<br />
 <div style="padding-left: 30px;">
