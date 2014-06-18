@@ -25,7 +25,7 @@ Step by step instructions:
 
   Link to this file is sent to user via e-mail upon registration as a request for account verification. You can customize this file and give it a desired look, just be sure to keep the `include_once` tag at the top and `$userMessage` variable wherever you want.
 
-== 5. Customize 'properties.ini' file ==
+== 5. Customize `properties.ini` file ==
 
   Properties file contains several sections, we'll describe each one right here.
 
