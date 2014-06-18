@@ -6,13 +6,13 @@
 
 POST Parameters:
 
-  `userName` - alphanumeric string. Minimum and maximum length are defined in [InstallationInstructions#5._Customize_%27properties.ini%27_file properties.ini] file.
+  `userName` - alphanumeric string. Minimum and maximum length are defined in [InstallationInstructions#5._Customize_properties.ini_file properties.ini] file.
 
   `password` - alphanumeric string. Length 32 characters. It should be MD5 hash of user password obtained on client side.
 
   `eMailAddress` - string, syntactically valid e-mail address.
 
-  `registrationCode` - alphanumeric string up to 10 characters long. It is needed only if it is defined so in `properties.ini` file.
+  `registrationCode` - alphanumeric string up to 10 characters long. It is needed only if it is defined so in [InstallationInstructions#5._Customize_properties.ini_file properties.ini] file.
 
 Modified tables:
 <div style="padding-left: 30px;">
