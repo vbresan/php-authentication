@@ -768,14 +768,18 @@ JSON output:
  "remainingInvitations":number of remaining invitations
 }
   }}}
-<br />
-<hr />
-<br />
-<strong><span style="font-size: 130%;">Script name: <a href="https://www.blogger.com/null" name="deleteExpiredData.php"><span style="font-family: courier new;">deleteExpiredData.php</span></a></span></strong><br />
-<br />
-POST Parameters: None<br />
-Modified tables:<br />
-<div style="padding-left: 30px;">
-<br /><span style="font-family: courier new;"><a href="https://www.blogger.com/2009/06/db-tables.html#TempInvitation">TempInvitation</a></span> - all unused invitations that have expired are deleted from the table. Expiration periods are set in <a href="https://www.blogger.com/2009/06/installation-instructions.html#properties.ini"><span style="font-family: courier new;">properties.ini</span></a> file. <br /><br /><span style="font-family: courier new;"><a href="https://www.blogger.com/2009/06/db-tables.html#TempVerification">TempVerification</a></span> - all verification codes that have expired are deleted from the table. Expiration periods are set in <a href="https://www.blogger.com/2009/06/installation-instructions.html#properties.ini"><span style="font-family: courier new;">properties.ini</span></a> file.<br /><br /><span style="font-family: courier new;"><a href="https://www.blogger.com/2009/06/db-tables.html#User">User</a></span> - all user accounts that haven't been verified are deleted from the table. Expiration periods are set in <a href="https://www.blogger.com/2009/06/installation-instructions.html#properties.ini"><span style="font-family: courier new;">properties.ini</span></a> file.</div>
-<br />
+----
+
+== Script name: `deleteExpiredData.php` ==
+
+POST Parameters: None
+
+Modified tables:
+
+  [DBTables#TempInvitation TempInvitation] - all unused invitations that have expired are deleted from the table. Expiration periods are set in [InstallationInstructions#5._Customize_properties.ini_file properties.ini] file.
+
+  [DBTables#TempVerification TempVerification] - all verification codes that have expired are deleted from the table. Expiration periods are set in [InstallationInstructions#5._Customize_properties.ini_file properties.ini] file.
+
+  [DBTables#User User] - all user accounts that haven't been verified are deleted from the table. Expiration periods are set in [InstallationInstructions#5._Customize_properties.ini_file properties.ini] file.
+
 Output: None (the script is supposed to by run by cron)
