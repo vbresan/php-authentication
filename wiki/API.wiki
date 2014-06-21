@@ -303,31 +303,88 @@ JSON output:
  "message":["Logged out"]
 }
   }}}
-<br />
-<hr />
-<br />
-<strong><span style="font-size: 130%;">Script name: <a href="https://www.blogger.com/null" name="requestLoginData.php"><span style="font-family: courier new;">requestLoginData.php</span></a></span></strong><br />
-<br />
-POST Parameters:<br />
-<div style="padding-left: 30px;">
-<br /><span style="font-family: courier new;">eMailAddress</span> - string, syntactically valid e-mail address.</div>
-<br />
-Modified tables: None<br />
-XML output on success:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: blue; font-family: 'Courier New';">&lt;?</span><span style="color: blue; font-family: 'Courier New';">xml</span> <span style="color: red; font-family: 'Courier New';">version</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"1.0"</strong></span> <span style="color: red; font-family: 'Courier New';">encoding</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UTF-8"?</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;XMLMessage</span> <span style="color: red; font-family: 'Courier New';">type</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"RequestLoginData"</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Error&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>false</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Error&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;UserName&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>anonymous</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/UserName&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Message&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>Account data sent to your e-mail address</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Message&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;/XMLMessage&gt;</span></div>
-<br />
-Possible XML outputs on failure:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: blue; font-family: 'Courier New';">&lt;?</span><span style="color: blue; font-family: 'Courier New';">xml</span> <span style="color: red; font-family: 'Courier New';">version</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"1.0"</strong></span> <span style="color: red; font-family: 'Courier New';">encoding</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UTF-8"?</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;XMLMessage</span> <span style="color: red; font-family: 'Courier New';">type</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"RequestLoginData"</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Error&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>true</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Error&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;UserName&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>anonymous</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/UserName&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Message&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>Invalid input</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Message&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;/XMLMessage&gt;</span><br /><br /><span style="color: blue; font-family: 'Courier New';">&lt;?</span><span style="color: blue; font-family: 'Courier New';">xml</span> <span style="color: red; font-family: 'Courier New';">version</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"1.0"</strong></span> <span style="color: red; font-family: 'Courier New';">encoding</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UTF-8"?</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;XMLMessage</span> <span style="color: red; font-family: 'Courier New';">type</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"RequestLoginData"</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Error&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>true</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Error&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;UserName&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>anonymous</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/UserName&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Message&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>Your request can not be currently fulfilled. Please try again a bit later.</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Message&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;/XMLMessage&gt;</span><br /><br /><span style="color: blue; font-family: 'Courier New';">&lt;?</span><span style="color: blue; font-family: 'Courier New';">xml</span> <span style="color: red; font-family: 'Courier New';">version</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"1.0"</strong></span> <span style="color: red; font-family: 'Courier New';">encoding</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UTF-8"?</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;XMLMessage</span> <span style="color: red; font-family: 'Courier New';">type</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"RequestLoginData"</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Error&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>true</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Error&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;UserName&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>anonymous</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/UserName&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Message&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>Unknown e-mail address</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Message&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;/XMLMessage&gt;</span></div>
-<br />
-JSON output on success:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"RequestLoginData",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:false,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"anonymous",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:["Account data sent to your e-mail address"]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span></div>
-<br />
-Possible JSON outputs on failure:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"RequestLoginData",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:true,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"anonymous",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:["Invalid input"]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span><br /><br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"RequestLoginData",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:true,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"anonymous",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:["Your request can not be currently fulfilled. Please try again a bit later."]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span><br /><br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"RequestLoginData",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:true,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"anonymous",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:["Unknown e-mail address"]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span></div>
+----
+
+== Script name: `requestLoginData.php` ==
+
+POST Parameters:
+
+  `eMailAddress` - string, syntactically valid e-mail address.
+
+Modified tables: None
+
+XML output on success:
+  __
+  {{{
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLMessage type="RequestLoginData">
+    <Error>false</Error>
+    <UserName>anonymous</UserName>
+    <Message>Account data sent to your e-mail address</Message>
+</XMLMessage>
+  }}}
+Possible XML outputs on failure:
+  __
+  {{{
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLMessage type="RequestLoginData">
+    <Error>true</Error>
+    <UserName>anonymous</UserName>
+    <Message>Invalid input</Message>
+</XMLMessage>
+  }}}
+  {{{
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLMessage type="RequestLoginData">
+    <Error>true</Error>
+    <UserName>anonymous</UserName>
+    <Message>Your request can not be currently fulfilled. Please try again a bit later.</Message>
+</XMLMessage>
+  }}}
+  {{{
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLMessage type="RequestLoginData">
+    <Error>true</Error>
+    <UserName>anonymous</UserName>
+    <Message>Unknown e-mail address</Message>
+</XMLMessage>
+  }}}
+JSON output on success:
+  __
+  {{{
+{
+ "type":"RequestLoginData",
+ "error":false,
+ "userName":"anonymous",
+ "message":["Account data sent to your e-mail address"]
+}
+  }}}
+Possible JSON outputs on failure:
+  __
+  {{{
+{
+ "type":"RequestLoginData",
+ "error":true,
+ "userName":"anonymous",
+ "message":["Invalid input"]
+}
+  }}}
+  {{{
+{
+ "type":"RequestLoginData",
+ "error":true,
+ "userName":"anonymous",
+ "message":["Your request can not be currently fulfilled. Please try again a bit later."]
+}
+  }}}
+  {{{
+{
+ "type":"RequestLoginData",
+ "error":true,
+ "userName":"anonymous",
+ "message":["Unknown e-mail address"]
+}
+  }}}
 <br />
 <hr />
 <br />
