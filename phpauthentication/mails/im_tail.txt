@@ -1,0 +1,16 @@
+
+
+Registration instructions:
+ - visit localhost
+ - click on 'Register!'
+ - enter your data
+ - for registration code enter: {$registrationCode}
+
+
+On a given e-mail address you will receive a verification link.
+Your account will be verified after you click on it and than you
+will be able to log in and proceed with usage. 
+
+
+----
+localhost
