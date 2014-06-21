@@ -481,34 +481,114 @@ JSON output on failure:
  "message":["User ID unknown"]
 }
   }}}
-<br />
-<hr />
-<br />
-<strong><span style="font-size: 130%;">Script name: <a href="https://www.blogger.com/null" name="setPrivateData.php"><span style="font-family: courier new;">setPrivateData.php</span></a></span></strong><br />
-<br />
-POST Parameters:<br />
-<div style="padding-left: 30px;">
-<br /><span style="font-family: courier new;">currentPassword</span> - alphanumeric string. Length 32 characters. It should be MD5 hash of user's current password obtained on client side.<br /><br /><span style="font-family: courier new;">newPassword</span> - alphanumeric string. Length 32 characters. It should be MD5 hash of user's new password obtained on client side.<br /><br /><span style="font-family: courier new;">eMailAddress</span> - string, syntactically valid e-mail address.<br /><br /><span style="font-family: courier new;">gender</span> - integer, 0 = not set, 1 = male, 2 = female<br /><br /><span style="font-family: courier new;">birthYear</span> - integer, 0 = not set, otherwise user must be between 5 and 120 years old.   </div>
-<br />
-Modified tables:<br />
-<div style="padding-left: 30px;">
-<br /><span style="font-family: courier new;"><a href="https://www.blogger.com/2009/06/db-tables.html#User">User</a></span> - user entry is updated with given data.</div>
-<br />
-XML output on success:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: blue; font-family: 'Courier New';">&lt;?</span><span style="color: blue; font-family: 'Courier New';">xml</span> <span style="color: red; font-family: 'Courier New';">version</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"1.0"</strong></span> <span style="color: red; font-family: 'Courier New';">encoding</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UTF-8"?</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;XMLMessage</span> <span style="color: red; font-family: 'Courier New';">type</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"SetPrivateData"</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Error&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>false</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Error&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;UserName&gt;</span><span style="color: black; font-family: 'Courier New';"><strong><em>username</em></strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/UserName&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Message&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>Personal data changed</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Message&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;/XMLMessage&gt;</span></div>
-<br />
-Possible XML outputs on failure:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: blue; font-family: 'Courier New';">&lt;?</span><span style="color: blue; font-family: 'Courier New';">xml</span> <span style="color: red; font-family: 'Courier New';">version</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"1.0"</strong></span> <span style="color: red; font-family: 'Courier New';">encoding</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UTF-8"?</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;XMLMessage</span> <span style="color: red; font-family: 'Courier New';">type</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"SetPrivateData"</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Error&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>true</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Error&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;UserName&gt;</span><span style="color: black; font-family: 'Courier New';"><strong><em>username</em></strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/UserName&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Message&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>Invalid input</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Message&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;/XMLMessage&gt;</span><br /><br /><span style="color: blue; font-family: 'Courier New';">&lt;?</span><span style="color: blue; font-family: 'Courier New';">xml</span> <span style="color: red; font-family: 'Courier New';">version</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"1.0"</strong></span> <span style="color: red; font-family: 'Courier New';">encoding</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UTF-8"?</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;XMLMessage</span> <span style="color: red; font-family: 'Courier New';">type</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"SetPrivateData"</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Error&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>true</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Error&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;UserName&gt;</span><span style="color: black; font-family: 'Courier New';"><strong><em>username</em></strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/UserName&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Message&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>Wrong current password</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Message&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;/XMLMessage&gt;</span><br /><br /><span style="color: blue; font-family: 'Courier New';">&lt;?</span><span style="color: blue; font-family: 'Courier New';">xml</span> <span style="color: red; font-family: 'Courier New';">version</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"1.0"</strong></span> <span style="color: red; font-family: 'Courier New';">encoding</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UTF-8"?</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;XMLMessage</span> <span style="color: red; font-family: 'Courier New';">type</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"SetPrivateData"</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Error&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>true</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Error&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;UserName&gt;</span><span style="color: black; font-family: 'Courier New';"><strong><em>username</em></strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/UserName&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Message&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>Personal data not changed - error occurred while saving the changes. It is possible that new e-mail address has already been registered.</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Message&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;/XMLMessage&gt;</span><br /><br /><span style="color: blue; font-family: 'Courier New';">&lt;?</span><span style="color: blue; font-family: 'Courier New';">xml</span> <span style="color: red; font-family: 'Courier New';">version</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"1.0"</strong></span> <span style="color: red; font-family: 'Courier New';">encoding</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UTF-8"?</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;XMLMessage</span> <span style="color: red; font-family: 'Courier New';">type</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"SetPrivateData"</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Error&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>true</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Error&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;UserName&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>anonymous</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/UserName&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Message&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>In order to change personal data, you have to be logged in</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Message&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;/XMLMessage&gt;</span></div>
-<br />
-JSON output on success:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"SetPrivateData",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:false,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"<em>username</em>",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:["Personal data changed"]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span></div>
-<br />
-Possible JSON outputs on failure:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"SetPrivateData",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:true,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"<em>username</em>",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:["Invalid input"]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span><br /><br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"SetPrivateData",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:true,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"<em>username</em>",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:["Wrong current password"]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span><br /><br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"SetPrivateData",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:true,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"<em>username</em>",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:["Personal data not changed - error occurred while saving the changes. It is possible that new e-mail address has already been registered."]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span><br /><br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"SetPrivateData",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:true,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"anonymous",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:["In order to change personal data, you have to be logged in"]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span></div>
+----
+
+== Script name: `setPrivateData.php` ==
+
+POST Parameters:
+
+  `currentPassword` - alphanumeric string. Length 32 characters. It should be MD5 hash of user's current password obtained on client side.
+
+  `newPassword` - alphanumeric string. Length 32 characters. It should be MD5 hash of user's new password obtained on client side.
+
+  `eMailAddress` - string, syntactically valid e-mail address.
+
+  `gender` - integer, 0 = not set, 1 = male, 2 = female
+
+  `birthYear` - integer, 0 = not set, otherwise user must be between 5 and 120 years old.
+
+Modified tables:
+
+  [DBTables#User User] - user entry is updated with given data.
+
+XML output on success:
+  __
+  {{{
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLMessage type="SetPrivateData">
+    <Error>false</Error>
+    <UserName>username</UserName>
+    <Message>Personal data changed</Message>
+</XMLMessage>
+  }}}
+Possible XML outputs on failure:
+  __
+  {{{
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLMessage type="SetPrivateData">
+    <Error>true</Error>
+    <UserName>username</UserName>
+    <Message>Invalid input</Message>
+</XMLMessage>
+  }}}
+  {{{
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLMessage type="SetPrivateData">
+    <Error>true</Error>
+    <UserName>username</UserName>
+    <Message>Wrong current password</Message>
+</XMLMessage>
+  }}}
+  {{{
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLMessage type="SetPrivateData">
+    <Error>true</Error>
+    <UserName>username</UserName>
+    <Message>Personal data not changed - error occurred while saving the changes. It is possible that new e-mail address has already been registered.</Message>
+</XMLMessage>
+  }}}
+  {{{
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLMessage type="SetPrivateData">
+    <Error>true</Error>
+    <UserName>anonymous</UserName>
+    <Message>In order to change personal data, you have to be logged in</Message>
+</XMLMessage>
+  }}}
+JSON output on success:
+  __
+  {{{
+{
+ "type":"SetPrivateData",
+ "error":false,
+ "userName":"username",
+ "message":["Personal data changed"]
+}
+  }}}
+Possible JSON outputs on failure:
+  __
+  {{{
+{
+ "type":"SetPrivateData",
+ "error":true,
+ "userName":"username",
+ "message":["Invalid input"]
+}
+  }}}
+  {{{
+{
+ "type":"SetPrivateData",
+ "error":true,
+ "userName":"username",
+ "message":["Wrong current password"]
+}
+  }}}
+  {{{
+{
+ "type":"SetPrivateData",
+ "error":true,
+ "userName":"username",
+ "message":["Personal data not changed - error occurred while saving the changes. It is possible that new e-mail address has already been registered."]
+}
+  }}}
+  {{{
+{
+ "type":"SetPrivateData",
+ "error":true,
+ "userName":"anonymous",
+ "message":["In order to change personal data, you have to be logged in"]
+}
+  }}}
 <br />
 <hr />
 <br />
