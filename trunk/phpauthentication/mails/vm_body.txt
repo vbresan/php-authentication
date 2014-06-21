@@ -1,0 +1,18 @@
+This mail has been sent to you as a result of profile registration at
+web site localhost
+
+(In case you haven't done the registration, please ignore the rest of the mail.)
+
+You can verify your account in two ways:
+1. Click on the link below. Link should open in your web browser.
+2. If it is not possible to click on the link, copy it in your browser's address bar and load the page.
+
+Loaded page will inform you about your account verification.
+
+So, in order to proceed, please click on the following link:
+{$link}
+
+Thanks for your registration,
+Administrator
+localhost
+ 

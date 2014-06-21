@@ -1,0 +1,10 @@
+Your user data on http://localhost/ is:
+
+User name: {$userName}
+New password: {$password}
+ 
+We urge you to change the password ASAP.
+
+----
+Administrator
+localhost 
