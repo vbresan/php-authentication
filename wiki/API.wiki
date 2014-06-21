@@ -126,83 +126,183 @@ Modified tables:
 
   [DBTables#User User] - user's entry is deleted.
 
-XML output on success:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: blue; font-family: 'Courier New';">&lt;?</span><span style="color: blue; font-family: 'Courier New';">xml</span> <span style="color: red; font-family: 'Courier New';">version</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"1.0"</strong></span> <span style="color: red; font-family: 'Courier New';">encoding</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UTF-8"?</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;XMLMessage</span> <span style="color: red; font-family: 'Courier New';">type</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UnregisterUser"</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Error&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>false</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Error&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;UserName&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>anonymous</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/UserName&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Message&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>User unregistered</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Message&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;/XMLMessage&gt;</span></div>
-<br />
-XML output on failure:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: blue; font-family: 'Courier New';">&lt;?</span><span style="color: blue; font-family: 'Courier New';">xml</span> <span style="color: red; font-family: 'Courier New';">version</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"1.0"</strong></span> <span style="color: red; font-family: 'Courier New';">encoding</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UTF-8"?</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;XMLMessage</span> <span style="color: red; font-family: 'Courier New';">type</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UnregisterUser"</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Error&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>true</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Error&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;UserName&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>anonymous</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/UserName&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Message&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>In order to close account, you have to be logged in</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Message&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;/XMLMessage&gt;</span></div>
-<br />
-JSON output on success:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"UnregisterUser",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:false,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"anonymous",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:["User unregistered"]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span></div>
-<br />
-JSON output on failure:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"UnregisterUser",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:true,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"anonymous",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:["In order to close account, you have to be logged in"]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span></div>
-<br />
-<hr />
-<br />
-<strong><span style="font-size: 130%;">Script name: <a href="https://www.blogger.com/null" name="verify.php"><span style="font-family: courier new;">verify.php</span></a></span></strong><br />
-<br />
-POST Parameters: None<br />
-GET Parameters:<br />
-<div style="padding-left: 30px;">
-<br /><span style="font-family: courier new;">verificationCode</span> - string, 21 characters long.</div>
-<br />
-Modified tables:<br />
-<div style="padding-left: 30px;">
-<br /><span style="font-family: courier new;"><a href="https://www.blogger.com/2009/06/db-tables.html#TempVerification">TempVerification</a></span> - entry containing given verification code is deleted.<br /> <br /><span style="font-family: courier new;"><a href="https://www.blogger.com/2009/06/db-tables.html#User">User</a></span> - for specific user, a verification flag is set to true.</div>
-<br />
-Output:<br />
-<div style="padding-left: 30px;">
-<br />Script doesn't give any output, in fact it is customizable web page. More about customization can be read <a href="https://www.blogger.com/2009/06/installation-instructions.html#verify.php">here</a>.</div>
-<br />
-<hr />
-<br />
-<strong><span style="font-size: 130%;">Script name: <a href="https://www.blogger.com/null" name="logIn.php"><span style="font-family: courier new;">logIn.php</span></a></span></strong><br />
-<br />
-POST Parameters:<br />
-<div style="padding-left: 30px;">
-<br /><span style="font-family: courier new;">userName</span> - alphanumeric string. Minimum length 2, maximum 10 characters.<br /><br /><span style="font-family: courier new;">password</span> - alphanumeric string. Length 32 characters. It should be MD5 hash of user password obtained on client side.</div>
-<br />
-Modified tables:<br />
-<div style="padding-left: 30px;">
-<br /><span style="font-family: courier new;"><a href="https://www.blogger.com/2009/06/db-tables.html#LastLogin">LastLogin</a></span> - upon login, timestamp and user's IP address is stored.<br />  <br /><span style="font-family: courier new;"><a href="https://www.blogger.com/2009/06/db-tables.html#MaskedCookieData">MaskedCookieData</a></span> - user's login identifier that is kept in cookie is stored here as well.<br /> </div>
-<br />
-XML output on success:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: blue; font-family: 'Courier New';">&lt;?</span><span style="color: blue; font-family: 'Courier New';">xml</span> <span style="color: red; font-family: 'Courier New';">version</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"1.0"</strong></span> <span style="color: red; font-family: 'Courier New';">encoding</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UTF-8"?</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;XMLMessage</span> <span style="color: red; font-family: 'Courier New';">type</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"LogIn"</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Error&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>false</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Error&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;UserName&gt;</span><span style="color: black; font-family: 'Courier New';"><strong><em>username</em></strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/UserName&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Message&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>Logged in</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Message&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;/XMLMessage&gt;</span></div>
-<br />
-Possible XML outputs on failure:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: blue; font-family: 'Courier New';">&lt;?</span><span style="color: blue; font-family: 'Courier New';">xml</span> <span style="color: red; font-family: 'Courier New';">version</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"1.0"</strong></span> <span style="color: red; font-family: 'Courier New';">encoding</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UTF-8"?</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;XMLMessage</span> <span style="color: red; font-family: 'Courier New';">type</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"LogIn"</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Error&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>true</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Error&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;UserName&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>anonymous</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/UserName&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Message&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>Invalid input</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Message&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;/XMLMessage&gt;</span><br /><br /><span style="color: blue; font-family: 'Courier New';">&lt;?</span><span style="color: blue; font-family: 'Courier New';">xml</span> <span style="color: red; font-family: 'Courier New';">version</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"1.0"</strong></span> <span style="color: red; font-family: 'Courier New';">encoding</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UTF-8"?</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;XMLMessage</span> <span style="color: red; font-family: 'Courier New';">type</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"LogIn"</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Error&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>true</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Error&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;UserName&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>anonymous</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/UserName&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Message&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>You haven't verified your account. Please visit the verification link that has been sent to your e-mail address.</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Message&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;/XMLMessage&gt;</span><br /><br /><span style="color: blue; font-family: 'Courier New';">&lt;?</span><span style="color: blue; font-family: 'Courier New';">xml</span> <span style="color: red; font-family: 'Courier New';">version</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"1.0"</strong></span> <span style="color: red; font-family: 'Courier New';">encoding</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UTF-8"?</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;XMLMessage</span> <span style="color: red; font-family: 'Courier New';">type</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"LogIn"</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Error&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>true</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Error&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;UserName&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>anonymous</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/UserName&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Message&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>Wrong username and/or password</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Message&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;/XMLMessage&gt;</span></div>
-<br />
-JSON output on success:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"LogIn",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:false,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"<em>username</em>",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:["Logged in"]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span></div>
-<br />
-Possible JSON outputs on failure:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"LogIn",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:true,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"anonymous",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:["Invalid input"]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span><br /><br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"LogIn",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:true,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"anonymous",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:["You haven't verified your account. Please visit the verification link that has been sent to your e-mail address."]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span><br /><br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"LogIn",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:true,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"anonymous",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:["Wrong username and/or password"]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span></div>
-<br />
-<hr />
-<br />
-<strong><span style="font-size: 130%;">Script name: <a href="https://www.blogger.com/null" name="logOut.php"><span style="font-family: courier new;">logOut.php</span></a></span></strong><br />
-<br />
-POST Parameters: None<br />
-Modified tables:<br />
-<div style="padding-left: 30px;">
-<br /><span style="font-family: courier new;"><a href="https://www.blogger.com/2009/06/db-tables.html#MaskedCookieData">MaskedCookieData</a></span> - entry containing user's login identifier is deleted.</div>
-<br />
-XML output:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: blue; font-family: 'Courier New';">&lt;?</span><span style="color: blue; font-family: 'Courier New';">xml</span> <span style="color: red; font-family: 'Courier New';">version</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"1.0"</strong></span> <span style="color: red; font-family: 'Courier New';">encoding</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UTF-8"?</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;XMLMessage</span> <span style="color: red; font-family: 'Courier New';">type</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"LogOut"</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Error&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>false</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Error&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;UserName&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>anonymous</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/UserName&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Message&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>Logged out</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Message&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;/XMLMessage&gt;</span></div>
-<br />
-JSON output:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"LogOut",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:false,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"anonymous",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:["Logged out"]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span></div>
+XML output on success:
+  __
+  {{{
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLMessage type="UnregisterUser">
+    <Error>false</Error>
+    <UserName>anonymous</UserName>
+    <Message>User unregistered</Message>
+</XMLMessage>
+  }}}
+XML output on failure:
+  __
+  {{{
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLMessage type="UnregisterUser">
+    <Error>true</Error>
+    <UserName>anonymous</UserName>
+    <Message>In order to close account, you have to be logged in</Message>
+</XMLMessage>
+  }}}
+JSON output on success:
+  __
+  {{{
+{
+ "type":"UnregisterUser",
+ "error":false,
+ "userName":"anonymous",
+ "message":["User unregistered"]
+}
+  }}}
+JSON output on failure:
+  __
+  {{{
+{
+ "type":"UnregisterUser",
+ "error":true,
+ "userName":"anonymous",
+ "message":["In order to close account, you have to be logged in"]
+}
+  }}}
+----
+
+== Script name: `verify.php` ==
+
+POST Parameters: None
+
+GET Parameters:
+  
+  `verificationCode` - string, 21 characters long.
+
+Modified tables:
+
+  [DBTables#TempVerification TempVerification] - entry containing given verification code is deleted.
+
+  [DBTables#User User] - for specific user, a verification flag is set to true.
+
+Output:
+  
+  Script doesn't give any output, in fact it is customizable web page. More about customization can be read [InstallationInstructions#4._Customize_verify.php_file here].
+----
+
+== Script name: `logIn.php` ==
+
+POST Parameters:
+
+  `userName` - alphanumeric string. Minimum length 2, maximum 10 characters.
+
+  `password` - alphanumeric string. Length 32 characters. It should be MD5 hash of user password obtained on client side.
+
+Modified tables:
+
+  [DBTables#LastLogin LastLogin] - upon login, timestamp and user's IP address is stored.
+
+  [DBTables#MaskedCookieData MaskedCookieData] - user's login identifier that is kept in cookie is stored here as well.
+
+XML output on success:
+  __
+  {{{
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLMessage type="LogIn">
+    <Error>false</Error>
+    <UserName>username</UserName>
+    <Message>Logged in</Message>
+</XMLMessage>
+  }}}
+Possible XML outputs on failure:
+  __
+  {{{
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLMessage type="LogIn">
+    <Error>true</Error>
+    <UserName>anonymous</UserName>
+    <Message>Invalid input</Message>
+</XMLMessage>
+  }}}
+  {{{
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLMessage type="LogIn">
+    <Error>true</Error>
+    <UserName>anonymous</UserName>
+    <Message>You haven't verified your account. Please visit the verification link that has been sent to your e-mail address.</Message>
+</XMLMessage>
+  }}}
+  {{{
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLMessage type="LogIn">
+    <Error>true</Error>
+    <UserName>anonymous</UserName>
+    <Message>Wrong username and/or password</Message>
+</XMLMessage>
+  }}}
+JSON output on success:
+  __
+  {{{
+{
+ "type":"LogIn",
+ "error":false,
+ "userName":"username",
+ "message":["Logged in"]
+}
+  }}}
+Possible JSON outputs on failure:
+  __
+  {{{
+{
+ "type":"LogIn",
+ "error":true,
+ "userName":"anonymous",
+ "message":["Invalid input"]
+}
+  }}}
+  {{{
+{
+ "type":"LogIn",
+ "error":true,
+ "userName":"anonymous",
+ "message":["You haven't verified your account. Please visit the verification link that has been sent to your e-mail address."]
+}
+  }}}
+  {{{
+{
+ "type":"LogIn",
+ "error":true,
+ "userName":"anonymous",
+ "message":["Wrong username and/or password"]
+}
+  }}}
+----
+
+== Script name: `logOut.php` ==
+
+POST Parameters: None
+
+Modified tables:
+
+  [DBTables#MaskedCookieData MaskedCookieData] - entry containing user's login identifier is deleted.
+
+XML output:
+  __
+  {{{
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLMessage type="LogOut">
+    <Error>false</Error>
+    <UserName>anonymous</UserName>
+    <Message>Logged out</Message>
+</XMLMessage>
+  }}}
+JSON output:
+  __
+  {{{
+{
+ "type":"LogOut",
+ "error":false,
+ "userName":"anonymous",
+ "message":["Logged out"]
+}
+  }}}
 <br />
 <hr />
 <br />
