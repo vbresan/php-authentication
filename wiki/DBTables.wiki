@@ -1,13 +1,47 @@
 #summary Database tables
 
-= `LastLogin` =
+= Database tables =
 
-Add your content here.
+== `LastLogin` ==
 
+|| *Field* || *Type* ||
+|| e_oid || int(12) ||
+|| user_ID || int(12) ||
+|| time || int(16) ||
+|| ipAddress || varchar(15) ||
 
-== Details ==
+== `MaskedCookieData` ==
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+|| *Field* || *Type* ||
+|| e_oid || int(12) ||
+|| user_ID || int(12) ||
+|| masked_ID || varchar(21) ||
+
+== `TempInvitation` ==
+
+|| *Field* || *Type* ||
+|| e_oid || int(12) ||
+|| registrationCode || varchar(10) ||
+|| eMailAddress || varchar(64) ||
+|| creationTime || int(16) ||
+
+== `TempVerification` ==
+
+|| *Field* || *Type* ||
+|| e_oid || int(12) ||
+|| user_ID || int(12) ||
+|| verificationCode || varchar(21) ||
+|| creationTime || int(16) ||
+
+== `TempVerification` ==
+
+|| *Field* || *Type* ||
+|| e_oid || int(12) ||
+|| userName || varchar(10) ||
+|| password || varchar(32) ||
+|| eMailAddress || varchar(64) ||
+|| gender || varchar(1) ||
+|| birthYear || int(16) ||
+|| memberSince || int(16) ||
+|| isVerified || tinyint(1) ||
+|| remainingInvitations || int(12) ||
