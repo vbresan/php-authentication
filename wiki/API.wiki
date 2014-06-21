@@ -431,31 +431,56 @@ JSON output:
  "message":[]
 }
   }}}
-<br />
-<hr />
-<br />
-<strong><span style="font-size: 130%;">Script name: <a href="https://www.blogger.com/null" name="getUserName.php"><span style="font-family: courier new;">getUserName.php</span></a></span></strong><br />
-<br />
-POST Parameters:<br />
-<div style="padding-left: 30px;">
-<br /><span style="font-family: courier new;">id</span> - user's id.</div>
-<br />
-Modified tables: None<br />
-XML output on success:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: blue; font-family: 'Courier New';">&lt;?</span><span style="color: blue; font-family: 'Courier New';">xml</span> <span style="color: red; font-family: 'Courier New';">version</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"1.0"</strong></span> <span style="color: red; font-family: 'Courier New';">encoding</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UTF-8"?</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;XMLMessage</span> <span style="color: red; font-family: 'Courier New';">type</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"GetUserName"</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Error&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>false</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Error&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;UserName&gt;</span><span style="color: black; font-family: 'Courier New';"><strong><em>username with assigned id</em></strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/UserName&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Message&gt;</span><span style="color: black; font-family: 'Courier New';"><strong></strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Message&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;/XMLMessage&gt;</span></div>
-<br />
-XML output on failure:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: blue; font-family: 'Courier New';">&lt;?</span><span style="color: blue; font-family: 'Courier New';">xml</span> <span style="color: red; font-family: 'Courier New';">version</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"1.0"</strong></span> <span style="color: red; font-family: 'Courier New';">encoding</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"UTF-8"?</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;XMLMessage</span> <span style="color: red; font-family: 'Courier New';">type</span><span style="color: black; font-family: 'Courier New';">=</span><span style="color: #8000ff; font-family: 'Courier New';"><strong>"GetUserName"</strong></span><span style="color: blue; font-family: 'Courier New';">&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Error&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>true</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Error&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;UserName&gt;</span><span style="color: black; font-family: 'Courier New';"><strong><em>username</em></strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/UserName&gt;</span><br /><span style="color: black; font-family: 'Courier New';"><strong>&nbsp;&nbsp;&nbsp; </strong></span><span style="color: blue; font-family: 'Courier New';">&lt;Message&gt;</span><span style="color: black; font-family: 'Courier New';"><strong>User ID unknown</strong></span><span style="color: blue; font-family: 'Courier New';">&lt;/Message&gt;</span><br /><span style="color: blue; font-family: 'Courier New';">&lt;/XMLMessage&gt;</span></div>
-<br />
-JSON output on success:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"GetUserName",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:false,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"<em>username with assigned id</em>",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:[]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span></div>
-<br />
-JSON output on failure:<br />
-<div style="padding-left: 30px;">
-<br /><span style="color: black; font-family: 'Courier New';">{</span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"type"</span><span style="color: black; font-family: 'Courier New';"><strong>:"GetUserName",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"error"</span><span style="color: black; font-family: 'Courier New';"><strong>:true,</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"userName"</span><span style="color: black; font-family: 'Courier New';"><strong>:"<em>username</em>",</strong></span><br /><span style="color: blue; font-family: 'Courier New';">&nbsp;"message"</span><span style="color: black; font-family: 'Courier New';"><strong>:["User ID unknown"]</strong></span><br /><span style="color: black; font-family: 'Courier New';">}</span></div>
+----
+
+== Script name: `getUserName.php` ==
+
+POST Parameters:
+
+  `id` - user's id.
+
+Modified tables: None
+
+XML output on success:
+  __
+  {{{
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLMessage type="GetUserName">
+    <Error>false</Error>
+    <UserName>username with assigned id</UserName>
+    <Message></Message>
+</XMLMessage>
+  }}}
+XML output on failure:
+  __
+  {{{
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLMessage type="GetUserName">
+    <Error>true</Error>
+    <UserName>username</UserName>
+    <Message>User ID unknown</Message>
+</XMLMessage>
+  }}}
+JSON output on success:
+  __
+  {{{
+{
+ "type":"GetUserName",
+ "error":false,
+ "userName":"username with assigned id",
+ "message":[]
+}
+  }}}
+JSON output on failure:
+  __
+  {{{
+{
+ "type":"GetUserName",
+ "error":true,
+ "userName":"username",
+ "message":["User ID unknown"]
+}
+  }}}
 <br />
 <hr />
 <br />
