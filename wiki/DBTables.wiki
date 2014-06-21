@@ -33,7 +33,7 @@
 || verificationCode || varchar(21) ||
 || creationTime || int(16) ||
 
-== `TempVerification` ==
+== `User` ==
 
 || *Field* || *Type* ||
 || e_oid || int(12) ||
