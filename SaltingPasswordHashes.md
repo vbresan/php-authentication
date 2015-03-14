@@ -1,0 +1,18 @@
+# Why is salting of password hashes necessary? #
+
+For some reason you have decided to implement user authorization on your web site from the scratch. Why not. You want to know how these things really function, and there is no better way of learning something than by doing it.
+
+So you start making your first steps and soon enough, after few initial obstacles, you are done with your first version. The simplest one. The one that stores user passwords, along with all other user data, in plain text. Maybe you are one of those who think - I would never do such a stupid thing - but, you would be surprised how this is still not that uncommon practice. For those who ask themselves what is in fact problem here if you are the only one who has database access, the answer would be the following. Your database might get compromised and users have a practice of having the same password on several web sites. If someone get's hold of your database, he could use the same user name, e-mail and password and try to log-in in PayPal or Amazon account, for example. It's clear that even you as an database administrator should never be able to do such a thing.
+
+Bottom line: never store passwords in plain text!
+
+
+Now you have decided to move on, and instead of storing passwords in plain text you will store their hash values. For the sake of this article, it is not important which hash algorithm you decide to use - [MD5](http://en.wikipedia.org/wiki/MD5), [SHA1](http://en.wikipedia.org/wiki/SHA1), etc. So what are these hash functions? You can read full description [here](http://en.wikipedia.org/wiki/Cryptographic_hash_function), in short, you can imagine these as 'one way' encryption functions. Each time you give string A to hash function, it will produce string B. There is no way that you can reverse it and get string A back from string B. Great - you encrypt user passwords with let's say MD5 and store hash values in database. When user wants to log in, you take his password, you make MD5 of it (even better if you already receive MD5 instead of plain text password), you compare it with the value stored in database and - that's it.
+
+This sound excellent in theory, but it fails miserably in practice. Just pick an arbitrary MD5 password hash from your database and google it. For example, let's take hash '6086cba2a9d4afbe31669614d8bbf28c'. Google it, and [here](http://www.google.com/search?q=6086cba2a9d4afbe31669614d8bbf28c) it is - the password is 'Robert1'. So, if user's password is based on a dictionary word, and most likely it is, you will find it among the first search results. Most likely you can find a MD5 hash of MD5 hash of your password. This kind of lookup is known as 'Rainbow table' lookup and you can read more about it [here](http://en.wikipedia.org/wiki/Rainbow_table).
+
+
+So finally, what would be the solution? [Salting](http://en.wikipedia.org/wiki/Salting_%28cryptography%29). Taking user's password, adding a 'salt' value, taking salted password hash and storing it in database. Take note that you have to use different salt for each user. In case you don't, if attacker figures out the salt value of one user, he knows salt values of all users and he can build  a dictionary again with the salt that he has figured out. Which salt should you pick? You can generate a random one for each user, or for example, you could use the time when the user has joined your system. Just make sure you can retrieve it, as you will do password salting with the same value whenever user tries to log in.
+
+
+As a conclusion, implementing own authentication system indeed is interesting. However, you do have the responsibility to keep your users' data private. So don't be hasty and make sure that you have done everything properly.
